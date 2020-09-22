@@ -39,5 +39,5 @@ const port = process.env.PORT || 3000;
 const ip = process.env.IP || '0.0.0.0';
 
 app.listen(port, ip, function() {
-	console.log('Server started on port 3000');
+	console.log(`Server started on port ${port}`);
 });
