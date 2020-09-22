@@ -13,10 +13,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const db = knex({
 	client: 'pg',
 	connection: {
-		host: '127.0.0.1',
+		host: 'postgresql-rectangular-12833',
 		user: 'postgres',
 		password: 'hyperjay1',
 		database: 'smart-brain'
